@@ -6,4 +6,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>e3-manager-pojo</artifactId>
+
 </project>
+<!-- refresh -->  
