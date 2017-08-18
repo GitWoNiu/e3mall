@@ -34,7 +34,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 			treeNode.setId(itemCat.getId());
 			treeNode.setText(itemCat.getName());
 			//父节点：close；叶子节点：open
-			treeNode.setState(itemCat.getIsParent()?"close":"open");
+			treeNode.setState(itemCat.getIsParent()?"closed":"open");
 			//添加到节点列表
 			treeNodes.add(treeNode);
 		}
