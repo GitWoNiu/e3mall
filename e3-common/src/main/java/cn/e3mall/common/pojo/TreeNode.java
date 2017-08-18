@@ -7,6 +7,7 @@ public class TreeNode implements Serializable {
 	private long id;
 	private String text;
 	private String state;
+	
 	public long getId() {
 		return id;
 	}
