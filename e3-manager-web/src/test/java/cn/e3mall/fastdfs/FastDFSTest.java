@@ -6,9 +6,21 @@ import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
 import org.junit.Test;
 
-public class FastDFSTest {
+import cn.e3mall.common.utils.FastDFSClient;
 
-	@Test
+public class FastDFSTest {
+	
+	@Test	//封装，调用工具类测试
+	public void testFastDFSClient() throws Exception {
+		//1.创建一个FastDFSClient对象
+		FastDFSClient fastDFSClient = new FastDFSClient("D:/JavaSW/Git-e3mall-repository/e3-manager-web/src/main/resources/conf/client.cnf");
+		//2.使用对象上传文件，返回路径
+		String result = fastDFSClient.uploadFile("E:/Test01/photo.jpg", "jpg", null);
+		//输出结果
+		System.out.println(result);
+	}
+
+	@Test	//未封装
 	public void testUpLoadFile() throws Exception {
 		//1.加载配置文件
 		ClientGlobal.init("D:/JavaSW/Git-e3mall-repository/e3-manager-web/src/main/resources/conf/client.cnf");
